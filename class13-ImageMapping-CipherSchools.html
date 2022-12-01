@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mapping</title>
+</head>
+<body>
+
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="House" 
+    srcset="plant.jpg 480w,
+            plant.jpg 800w,
+            plant.jpg 1200w"
+    sizes="(max-width: 480px) 240px,
+            (max-width: 960px) 480px,
+            (max-width: 1440px) 960px" 
+    >
+        
+    <picture>
+        <source media="(max-width: 600px)" srcset="https://www.w3schools.com/html/pic_trulli.jpg">
+        <source media="(max-width: 900px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+        <img src="https://www.w3schools.com/html/img_food.jpg">
+    </picture> 
+
+    <!--Image Mapping-->
+
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="workspace" usemap="#workspace">
+
+    <map name="workspace">
+        <area shape="rect" coords="34,44,270,350" alt="computer" href="https://images.app.goo.gl/az9JBfsRXGn3dMvU6">
+        <area shape="rect" coords="290,172,333,250" href="https://images.app.goo.gl/vXgskB4FHhfmh9Q28" alt="Phone">
+        <area shape="circle" coords="337,300,44" href="https://images.app.goo.gl/G1BnMfJ5cqbVi8929" alt="Cup">
+    </map>
+</body>
+</html>
